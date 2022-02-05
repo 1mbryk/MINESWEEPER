@@ -3,10 +3,10 @@
 using namespace std;
 #define BOMB '*'
 
-#define BLUE "\e[34;49m"   // 1-blue
-#define GREEN "\e[32;49m"  // 2-green
-#define RED "\e[31;49m"    // 3-red
-#define PURPLE "\e[35;49m" // 4-purple
+#define BLUE "\e[34;49m"   
+#define GREEN "\e[32;49m"  
+#define RED "\e[31;49m"    
+#define PURPLE "\e[35;49m" 
 #define WHITE "\e[37;49m"
 #define YELLOW "\e[33;49m"
 #define CYAN "\e[36;49m"
@@ -52,7 +52,7 @@ void init_ground(struct Inform **map, int size)
 {
     srand(time(NULL));
     int rand_num;
-    for (int i = 0; i < size; i++) // растаноўка бобмаў
+    for (int i = 0; i < size; i++) 
     {
         for (int j = 0; j < size; j++)
         {
@@ -67,7 +67,7 @@ void init_ground(struct Inform **map, int size)
             }
         }
     }
-    for (int i = 0; i < size; i++) //запаўненне астатніх квадратаў
+    for (int i = 0; i < size; i++) 
     {
         for (int j = 0; j < size; j++)
         {
@@ -113,7 +113,7 @@ void init_ground(struct Inform **map, int size)
     }
 }
 
-void outpt(struct Inform **map, int size) //звычайны вывад
+void outpt(struct Inform **map, int size) 
 {
     for (int i = 0; i < size; i++)
     {
@@ -161,7 +161,7 @@ void outpt(struct Inform **map, int size) //звычайны вывад
     }
 }
 
-void final_outpt(struct Inform **map, int size) // фінальны вывад, каб вывесці ўсе бомбы
+void final_outpt(struct Inform **map, int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -209,7 +209,7 @@ void final_outpt(struct Inform **map, int size) // фінальны вывад, 
     }
 }
 
-void open_sqr(struct Inform **map, bool **check, int size, int ind_i, int ind_j) // у асноўным для адкрыцця пустых квадратаў
+void open_sqr(struct Inform **map, bool **check, int size, int ind_i, int ind_j) 
 {
     for (int i = -1; i < 2; i++)
     {
@@ -240,7 +240,7 @@ void open_sqr(struct Inform **map, bool **check, int size, int ind_i, int ind_j)
     }
 }
 
-void chng_sqr(struct Inform **map, int size, bool **chck) //адкрыццё квадратаў
+void chng_sqr(struct Inform **map, int size, bool **chck) 
 {
     int chs_y;
     int chs_x;
@@ -274,7 +274,7 @@ void chng_sqr(struct Inform **map, int size, bool **chck) //адкрыццё к�
     }
 }
 
-bool check(struct Inform **map, int size) // правярае ці адкрыта бомба
+bool check(struct Inform **map, int size) 
 {
     for (int i = 0; i < size; i++)
     {
@@ -288,8 +288,8 @@ bool check(struct Inform **map, int size) // правярае ці адкрыт�
     }
     return true;
 }
-bool win_check(struct Inform **map, int size) // як жа цяжка пісаць каменты піздзец
-{                                             // правярае для брэйку з асноўнага цыклу
+bool win_check(struct Inform **map, int size) 
+{                                             
     bool win = false;
     for (int i = 0; i < size; i++)
     {
