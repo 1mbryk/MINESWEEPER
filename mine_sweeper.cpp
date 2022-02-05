@@ -8,7 +8,7 @@ int main()
     {
         map[i] = new Inform[size];
     }
-    bool **chck = new bool *[size]; // без яго не працуе адкрыццё квадрацікаў:) гэта толькі там і выкарысоўваецца
+    bool **chck = new bool *[size]; 
     for (int i = 0; i < size; i++)
     {
         chck[i] = new bool[size];
